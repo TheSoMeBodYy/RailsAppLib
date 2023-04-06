@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @reader_card %>
+
+<div>
+  <%= link_to "Edit this reader card", edit_reader_card_path(@reader_card) %> |
+  <%= link_to "Back to reader cards", reader_cards_path %>
+
+  <%= button_to "Destroy this reader card", @reader_card, method: :delete %>
+</div>

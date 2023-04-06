@@ -1,0 +1,27 @@
+<%= form_with(model: reader_card) do |form| %>
+  <% if reader_card.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reader_card.errors.count, "error") %> prohibited this reader_card from being saved:</h2>
+
+      <ul>
+        <% reader_card.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user, style: "display: block" %>
+    <%= form.text_field :user %>
+  </div>
+
+  <div>
+    <%= form.label :book, style: "display: block" %>
+    <%= form.text_field :book %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

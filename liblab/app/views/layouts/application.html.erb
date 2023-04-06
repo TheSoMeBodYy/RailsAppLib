@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liblab</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Libraries", libraries_path %>
+    <%= link_to "Books", books_index_path %>
+    <%= link_to "Authors", authors_index_path %>
+    <%= link_to "Readers cards", reader_cards_index_path %>
+    <%= link_to "Users", users_index_path %>
+    <%= yield %>
+  </body>
+</html>
